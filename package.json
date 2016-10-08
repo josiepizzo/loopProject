@@ -1,0 +1,44 @@
+{
+  "name": "agency",
+  "title": "Agency",
+  "version": "3.3.7+1",
+  "main": "server.js",
+  "homepage": "http://startbootstrap.com/template-overviews/agency",
+  "author": "Start Bootstrap",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-header": "^1.8.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^1.11.3",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "passport-local-sequelize": "^0.6.0",
+    "sequelize": "^3.24.3",
+    "sequelize-cli": "^2.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "passport": "^0.3.2",
+    "passport-local-sequelize": "^0.6.0"
+  }
+}

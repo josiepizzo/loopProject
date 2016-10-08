@@ -1,0 +1,103 @@
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.text-muted {
+    color: #777
+}
+
+/***********
+Header
+***********/
+
+h1 {
+	margin-top: 3%;
+	text-align: center;
+	font-size: 85px;
+	color: #123652;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
+}
+
+h1:hover {
+	color: #496D89;
+}
+
+h2 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+h4 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+}
+
+#submit {
+	margin-top: 2%;
+	margin-bottom: 5%;
+	background-color: #123652;
+}
+
+#submit:hover {
+	background-color: #496D89;
+}
+
+.question-container {
+	text-align: center;
+	padding-bottom:10%;
+}
+
+.userInfo {
+	text-align: center;
+	padding-bottom: 2%;
+	margin-bottom: 1%;
+	border-bottom: 8px solid #123652;
+}
+
+#name {
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	text-align: center;
+}
+
+#image {
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	text-align: center;
+}
+
+/***********
+Result modal
+***********/
+
+.modal-title {
+	text-align: center;
+}
+
+.modal-body {
+	text-align: center;
+}
+
+#match-img {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 80%;
+	border-radius: 45%;
+}
+
+#myModalLabel {
+	font-size: 40px;
+	font-family: 'Pacifico', cursive;
+}
+
+#match-name-style {
+	font-size: 42px;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	margin-bottom: 2%;
+}
+
