@@ -4,7 +4,7 @@ var passportLocalSequelize = require('passport-local-sequelize');
 
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
-    user_id: DataTypes.STRING,
+    // user_id: DataTypes.STRING,
     username: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
@@ -22,10 +22,10 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  passportLocalSequelize.attachToUser(User, {
-    usernameField: 'username',
-    hashField: 'password',
-    saltField: 'mysalt'
-  });
+  // passportLocalSequelize.attachToUser(user, {
+  //   usernameField: 'username',
+  //   hashField: 'password',
+  //   saltField: 'mysalt'
+  // });
   return User;
 };

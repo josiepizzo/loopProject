@@ -1,9 +1,24 @@
 //Create a module and create a controller for angular
+console.log('in controller 1');
+
 var myangularapp = angular.module("myangularapp", []);
-myangularapp.controller("myangularController", function($scope, $http) {
+myangularapp.controller("myangularController", function($scope, $http, $window) {
+    console.log('in controller 2');
+    $scope.register = function() {
+        alert('In Register');
+        $http.post("/register", {
+                password: $scope.newUser.password,
+                email: $scope.newUser.email,
+                username: $scope.newUser.username
+        }).then(function(response) {
+            console.log('success', success);
+            alert('Thanks for registering');
+            $window.location = '/index.html';
+        });      
+    };
 
     $scope.login = function() {
-        alert('test3');
+        
 
         $scope.username1;
         $scope.password1;
@@ -18,62 +33,14 @@ myangularapp.controller("myangularController", function($scope, $http) {
             if (response.data[0].status == 1) {
                 //window.location.href = 'http://joelwebsites.com';
                 console.log("Login Successful");
+                $window.location = '/index.html';
             }
 
         }, function errorCallback(response) {
-            alert('error');
+            alert('Password Incorrect or User not found.');
             // called asynchronously if an error occurs
             // or server returns response with an error status.
         });
     }
 
 });
-
-function login() {
-    //login code here
-    var username = $('#username1').val();
-    var password = $('#password1').val();
-
-    alert(username + 'hi i am the username login');
-    alert(password + 'hi i am the password login');
-
-    alert('login function is called!');
-    var url = 'http://localhost/login/static/login.js?username=' + username + '&password=' + password;
-
-    alert(url);
-    console.log(url);
-    $.post(url,
-        function(data, status) {
-
-            alert(JSON.stringify(data));
-            var status = data[0].status;
-
-            if (status == 1) {
-                //this is the sucess code
-                window.location.href = '#';
-            }
-
-            if (status != 1) {
-                alert('login failed');
-            }
-            alert(status + 'i am the status test');
-            alert("Data: " + data + "\nStatus: " + status);
-        });
-
-}
-
-function register() {
-    var email = $('#email').val();
-    var username = $('#username').val();
-    var confirmpassword = $('#confirm-password').val();
-
-
-    $.post("/register", {
-            password: confirmpassword,
-            email: email,
-            username: username
-        },
-        function(data, status) {
-            alert("Data: " + data + "\nStatus: " + status);
-        });
-}

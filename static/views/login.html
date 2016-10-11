@@ -4,10 +4,10 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="/js/loginController.js"type="text/javascript"></script>
+    <script src="/js/loginController.js" type="text/javascript"></script>
     </head>
 <body>
-    <div controller="myangularController" class="container">
+    <div ng-controller="myangularController" class="container">
       <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-login">
@@ -55,21 +55,21 @@
                 </form>
                 <form id="register-form" method="post" role="form" style="display: none;">
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username"  ng-model="newUser.username">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" ng-model="newUser.email">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" ng-model="newUser.password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" ng-model="newUser.confirmPassword">
                   </div>
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" onclick="register();" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                        <button type="button" ng-click="register()" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register">Register Now</button>
                       </div>
                     </div>
                   </div>
