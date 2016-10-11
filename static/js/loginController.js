@@ -11,7 +11,6 @@ myangularapp.controller("myangularController", function($scope, $http, $window) 
                 email: $scope.newUser.email,
                 username: $scope.newUser.username
         }).then(function(response) {
-            console.log('success', success);
             alert('Thanks for registering');
             $window.location = '/index.html';
         });      
