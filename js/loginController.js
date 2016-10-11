@@ -37,7 +37,7 @@ function login(){
         alert(password+'hi i am the password login');
             
         alert('login function is called!');
-       var url = 'http://localhost/login/public/login.js?username='+username+'&password='+password;
+       var url = 'http://localhost/login/static/login.js?username='+username+'&password='+password;
             
             alert(url);
             console.log(url);
@@ -66,7 +66,7 @@ function login(){
     var confirmpassword =$('#confirm-password').val();
       
             
-            $.post("http://localhost/public/register.html",
+            $.post("http://localhost/static/register.html",
     {
         password: confirmpassword,
         email: email,

@@ -26,6 +26,6 @@ module.exports = function(sequelize, DataTypes) {
     usernameField: 'username',
     hashField: 'password',
     saltField: 'mysalt'
-});
+  });
   return User;
 };

@@ -19,6 +19,9 @@ app.get('/', function(req, res){
   res.sendFile('index.html', viewOptions)
 })
 
+app.get('/login', function(req, res){
+  res.sendFile('login.html', viewOptions)
+})
 
 
 /*app.use(session({
@@ -44,12 +47,12 @@ app.use(passport.session());
 
 
 
-require('./routes/routes.js')(app,passport);
+require('./routes/routes.js')(app, passport);
 
 
 var port = process.env.PORT || 3000;
-  db.sequelize.sync().then(function() {
-      app.listen(port, function(){
+db.sequelize.sync().then(function() {
+  app.listen(port, function(){
     console.log('connected to', port);
   });
 });

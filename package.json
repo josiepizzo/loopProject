@@ -37,6 +37,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
   },
   "dependencies": {
+    "bcryptjs": "^2.3.0",
     "bluebird": "^3.4.6",
     "cookie-parser": "^1.4.3",
     "depd": "^1.1.0",
