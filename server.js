@@ -5,11 +5,20 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var app = express();
 
+var viewOptions = {
+  root: __dirname + '/static/views'
+}
+
 var db = require('./models');
 
 //line below allows anything that is in this folder to be accessed via the internet
 //inside the public folder the css file and any images can be stored
-app.use(express.static('public'));
+app.use('/', express.static(__dirname + '/static/'));
+
+app.get('/', function(req, res){
+  res.sendFile('index.html', viewOptions)
+})
+
 
 
 /*app.use(session({
@@ -17,7 +26,7 @@ app.use(express.static('public'));
   cookie: {  }
 }));*/
 app.use(bodyParser.urlencoded({
-	extended: false
+  extended: false
 }));
 //noapp.use(require('connect-multiparty')());
 app.use(cookieParser());
@@ -25,8 +34,6 @@ app.use(session({ secret: 'super-secret' }));
 
 app.use(passport.initialize());
 app.use(passport.session());
-
- 
 
 
 
@@ -41,8 +48,8 @@ require('./routes/routes.js')(app,passport);
 
 
 var port = process.env.PORT || 3000;
-	db.sequelize.sync().then(function() {
-			app.listen(port, function(){
-		console.log('connected to', port);
-	});
+  db.sequelize.sync().then(function() {
+      app.listen(port, function(){
+    console.log('connected to', port);
+  });
 });

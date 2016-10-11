@@ -37,8 +37,29 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
   },
   "dependencies": {
+    "bluebird": "^3.4.6",
     "cookie-parser": "^1.4.3",
+    "depd": "^1.1.0",
+    "dottie": "^1.1.1",
+    "generic-pool": "^2.4.2",
+    "html": "^1.0.0",
+    "inflection": "^1.10.0",
+    "lodash": "^4.16.4",
+    "moment": "^2.15.1",
+    "moment-timezone": "^0.5.6",
+    "mysql": "^2.11.1",
+    "node-uuid": "^1.4.7",
     "passport": "^0.3.2",
-    "passport-local-sequelize": "^0.6.0"
+    "passport-local": "^1.0.0",
+    "passport-local-sequelize": "^0.6.0",
+    "retry-as-promised": "^2.0.1",
+    "semver": "^5.3.0",
+    "sequelize": "^3.24.3",
+    "sequelize-cli": "^2.4.0",
+    "shimmer": "^1.1.0",
+    "terraformer-wkt-parser": "^1.1.2",
+    "toposort-class": "^1.0.1",
+    "validator": "^6.0.0",
+    "wkx": "^0.4.0"
   }
 }
