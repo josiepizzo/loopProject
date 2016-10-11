@@ -34,13 +34,13 @@ $(document).ready(function(){
 
 
 			//Creates person object and converts result array from string --> number array.
-			var newFriend = {
+			var newMember = {
 				name: $("#name").val().trim(),
 				image: $("#image").val().trim(),
 				result: userResult.map(Number) //loops through array
 			}
 
-			$.post(currentURL + "/api/friends", newFriend,
+			$.post(currentURL + "/api/server", newMember,
 		    function(data){
 		    	if(data == true){
 		    		alert("New member has been added to the loop database")
@@ -56,7 +56,7 @@ $(document).ready(function(){
 		    var matchImage;
 
 		    //API call to friends.js
-		    $.get(currentURL + "/api/friends", function(data){
+		    $.get(currentURL + "/api/server", function(data){
 		    	for (var i = 0; i < data.length; i++) {
 		    		compareMatches(newPerson.result, data[i].result);
 		    	}
