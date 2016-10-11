@@ -12,7 +12,7 @@ myangularapp.controller("myangularController", function($scope, $http, $window) 
                 username: $scope.newUser.username
         }).then(function(response) {
             alert('Thanks for registering');
-            $window.location = '/index.html';
+            $window.location = '/';
         });      
     };
 
@@ -25,15 +25,9 @@ myangularapp.controller("myangularController", function($scope, $http, $window) 
         $http.post('/login', {
             username: $scope.username1,
             password: $scope.password1,
-        }).then(function(response) {
-            alert('hi i am working');
-            //alert(JSON.stringify(response));
-            alert(response.data[0].status);
-            if (response.data[0].status == 1) {
-                //window.location.href = 'http://joelwebsites.com';
-                console.log("Login Successful");
-                $window.location = '/index.html';
-            }
+        }).then(function(response) {            
+            console.log("Login Successful");
+            $window.location = '/';
 
         }, function errorCallback(response) {
             alert('Password Incorrect or User not found.');
