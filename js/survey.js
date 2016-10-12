@@ -29,15 +29,18 @@ $(document).ready(function(){
 			//If validation comes back true, continue on with matching logic.
 			if(validate() == true) {
 
+			var role = $("#q0").val
 			//Grab user result in an array.
-			var userResult = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), $("#q11").val(), $("#q12").val(), $("#q13").val(), $("#q14").val(), $("#q15").val(), $("#q16").val(), $("#q17").val(), $("#q18").val(), $("#q19").val(), $("#q20").val(),$("#q21").val(), $("#q22").val(), $("#23").val(), $("#q24").val(), $("#q25").val(),]
+			var userResult = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), $("#q11").val(), $("#q12").val(), $("#q13").val(), $("#q14").val(), $("#q15").val(), $("#q16").val(), $("#q17").val(), $("#q18").val(), $("#q19").val(), $("#q20").val(),$("#q21").val(), $("#q22").val(), $("#23").val(), $("#q24").val(), $("#q25").val()]
 
 
 			//Creates person object and converts result array from string --> number array.
 			var newMember = {
-				name: $("#name").val().trim(),
-				image: $("#image").val().trim(),
-				result: userResult.map(Number) //loops through array
+				role: $("#role").val().trim(),
+				firstName: $("#firstName").val().trim(),
+				lastName: $("#lastName").val().trim(),
+				result: userResult.map(Number),
+
 			}
 
 			$.post(currentURL + "/api/server", newMember,
@@ -53,7 +56,6 @@ $(document).ready(function(){
 
 		    //Information on matched user.
 		    var matchName;
-		    var matchImage;
 
 		    //API call to friends.js
 		    $.get(currentURL + "/api/server", function(data){
@@ -64,7 +66,6 @@ $(document).ready(function(){
 		    	if (resultArray.length == data.length) {
 		    		var indexOfMatch = resultArray.indexOf(Math.min.apply(Math, resultArray));
 		    		matchName = data[indexOfMatch].name;
-		    		matchImage = data[indexOfMatch].image;
 		    		displayModal();
 		    	}
 		    })
@@ -81,9 +82,8 @@ $(document).ready(function(){
 
 			//Display modal with information on match.
 			function displayModal() {
-				$("#user-name").text(newPerson.name);
+				$("#user-name").text(newMember.name);
 				$("#match-name").text(matchName);
-				$("#match-img").attr("src", matchImage);
 				$("#myModal").modal();
 			}
 
