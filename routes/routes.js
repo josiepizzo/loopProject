@@ -21,6 +21,13 @@ module.exports = function(app, passport, db){
     res.send(req.user);
   });
 
+  app.get('/services', function(req, res){
+  res.sendFile('survey.html', viewOptions)
+	});
+
+
+
+
 	function isLoggedIn(req, res, next) {
 		if (req.isAuthenticated()) {
 			return next();
