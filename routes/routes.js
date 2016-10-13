@@ -3,6 +3,10 @@ module.exports = function(app, passport, db){
     console.log('user', req.user);
     res.send(200, req.user);
   });
+	console.log('__dirname', __dirname);
+	var viewOptions = {
+    root: __dirname + '/../static/views'
+}
 
 	
   app.post('/register', function(req, res, next) {
@@ -22,7 +26,7 @@ module.exports = function(app, passport, db){
   });
 
   app.get('/services', function(req, res){
-  res.sendFile('survey.html', viewOptions)
+   res.sendFile('survey.html', viewOptions)
 	});
 
 

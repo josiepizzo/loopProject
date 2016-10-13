@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     lname: DataTypes.STRING,
     score: DataTypes.INTEGER,
     match: DataTypes.STRING,
-    usertype: DataTypes.STRING,
+    usertype: DataTypes.BOOLEAN,
     paired: DataTypes.BOOLEAN
   }, {
     classMethods: {
