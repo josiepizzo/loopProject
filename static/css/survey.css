@@ -1,6 +1,7 @@
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
 }
 
 .text-muted {
@@ -33,6 +34,7 @@ h4 {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
 }
+
 
 #submit {
   margin-top: 2%;
@@ -99,4 +101,14 @@ Result modal
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
   margin-bottom: 2%;
+}
+
+
+ul.links {
+  list-style: none;
+  
+}
+
+a:hover, a:focus, a:active, a.active{
+  color: #080303;
 }
