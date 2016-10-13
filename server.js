@@ -55,3 +55,13 @@ db.sequelize.sync().then(function() {
         console.log('connected to', port);
     });
 });
+
+
+app.get('/survey', function(req, res){
+   res.sendFile('survey.html', viewOptions)
+	});
+
+
+app.get('/events', function(req, res){
+   res.sendFile('events.html', viewOptions)
+	});
