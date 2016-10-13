@@ -1,6 +1,9 @@
+body{
+  font-size: 19px;
+}
+
 .navbar-custom .navbar-brand{
   color: red;
-
 }
 
 header{
@@ -31,6 +34,15 @@ h4.subheading {
     border-top-right-radius: 80%;
     border-bottom-right-radius: 80%;
     border-bottom-left-radius: 80%;
+}
+
+ul.links {
+  list-style: none; 
+  text-align: center;
+}
+
+a:hover, a:focus, a:active, a.active{
+  color: #080303;
 }
 
 
