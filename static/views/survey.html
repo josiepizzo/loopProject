@@ -18,277 +18,305 @@
 	<body>
 		<div class="container">
 		
-			<a href="home.html"><h1>the loop</h1></a>
+			<a href="/"><h1>the loop</h1></a>
 		</div>
 
 		<div class="container userInfo">
 			<h2>About You</h2>
 			<!--Name input-->
 			<p>Name (Required)</p>
-			<input type="text" id="firstName" class="form-control" required placeholder="First Name" aria-describedby="basic-addon1">
-			<input type="text" id="lastName" class="form-control" required placeholder="Last Name" aria-describedby="basic-addon1">
+			<input type="text" id="firstName" class="form-control" required placeholder="First Name" aria-describedby="basic-addon1" value="nancy">
+			<input type="text" id="lastName" class="form-control" required placeholder="Last Name" aria-describedby="basic-addon1" value="lucas">
 		</div>
 
 		<div class="question-container" id= "questions">
 			<h4>I would like to join the loop as a... </h4>
-				<div class="btn-group" role="group" id= "q0" aria-label="...">
-						<button type="button" class="btn btn-default" value="1">MENTOR</button>
-						<button type="button" class="btn btn-default" value="2">MENTEE</button>
-					</div>
-			</div>
+				<select class="questions" id="q0">
+            <option value="1" selected>Mentor</option>
+            <option value="2">Mentee</option>
+      	</select>
+		</div>
 	
-			<div class="question-container">
-				<h4>The best way to communicate with people is face-to-face.</h4>
-					<div class="btn-group" role="group" id= "q1" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
-			</div>
+
+
+			
+				<div class="question-container">
+					<h4>The best way to communicate with people is face-to-face.</h4>
+					<select class="question-select" id= "q1" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
+				</div>
 						<div class="question-container">
 				<h4>I am a natural extrovert. </h4>
-					<div class="btn-group" role="group" id= "q2" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q2" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>Everyone’s views should be respected.</h4>
-					<div class="btn-group" role="group" id= "q3" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q3" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>It is difficult for me to relate to other people’s feelings.</h4>
-					<div class="btn-group" role="group" id= "q4" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default"  value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q4" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>It is challenging to stay relaxed and focused when I am under some pressure.</h4>
-					<div class="btn-group" role="group" id= "q5" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q5" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>If I were offered a job in a foreign country, I would move immediately.</h4>
-					<div class="btn-group" role="group" id= "q6" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q6" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>We need more women working in the field of technology.</h4>
-					<div class="btn-group" role="group" id= "q7" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q7" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 					
 				<div class="question-container">
 				<h4>I love to analyze problems with a partner.</h4>
-					<div class="btn-group" role="group" id= "q8" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q8" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>I am energized after spending time with a group of people.</h4>
-					<div class="btn-group" role="group" id= "q9" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q9" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>Technology rocks!</h4>
-					<div class="btn-group" role="group" id= "q10" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q10" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>The best leaders allow the people they are supervising to own their own work.</h4>
-					<div class="btn-group" role="group" id= "q11" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q11" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>When I am presented with a project, I dive right in.</h4>
-					<div class="btn-group" role="group" id= "q12" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q12" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>Google is my best friend.</h4>
-					<div class="btn-group" role="group" id= "q13" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q13" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>Since I was young, I have always wanted to work in the field of technology.</h4>
-					<div class="btn-group" role="group" id= "q14" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q14" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>If I won a $20 million lottery tonight, I would still go to work tomorrow.</h4>
-					<div class="btn-group" role="group" id= "q15" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q15" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>I take time for myself to refresh and reboot.</h4>
-					<div class="btn-group" role="group" id= "q16" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q16" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>On a rainy Sunday afternoon, I catch up on all my projects.</h4>
-					<div class="btn-group" role="group" id= "q17" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q17" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>When I am frustrated by a project, I keep plugging along despite my frustration.</h4>
-					<div class="btn-group" role="group" id= "q18" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q18" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>I explain things very well.</h4>
-					<div class="btn-group" role="group" id= "q19" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q19" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>I ask a lot of questions..</h4>
-					<div class="btn-group" role="group" id= "q20" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q20" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>I read mostly non-fiction (as opposed to fiction).</h4>
-					<div class="btn-group" role="group" id= "q21" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q21" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>The best way to communicate with people is face-to-face.</h4>
-					<div class="btn-group" role="group" id= "q22" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q22" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>I have had many positive role models who have helped me along my journey.</h4>
-					<div class="btn-group" role="group" id= "q23" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q23" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>Collaboration is the key to success.</h4>
-					<div class="btn-group" role="group" id= "q24" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q24" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
 						<div class="question-container">
 				<h4>I believe that within the next ten years, there will be twice as many women employed in the technology sector as there are today.</h4>
-					<div class="btn-group" role="group" id= "q25" aria-label="...">
-						  <button type="button" class="btn btn-default" value="1">Oh, that's so NOT me!</button>
-						  <button type="button" class="btn btn-default" value="2">That's me on some days.</button>
-						  <button type="button" class="btn btn-default" value="3">Not really sure.</button>
-						  <button type="button" class="btn btn-default" value="4">That's me on most days.</button>
-						  <button type="button" class="btn btn-default" value="5">Yes, that's ME!</button>
-					</div>
+					<select class="question-select" id= "q25" aria-label="...">
+		            <option value=""></option>
+		            <option value="1">1 (Oh, that's so NOT me!)</option>
+		            <option value="2">2</option>
+		            <option value="3" selected>3</option>
+		            <option value="4">4</option>
+		            <option value="5">5 (Yes, that's ME!)</option>
+					</select>
 			</div>
-
+		
 				
 
 		<div class="container">
