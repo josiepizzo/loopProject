@@ -89,7 +89,7 @@ app.post("/api/survey", function(req,res){
     user.lname = req.body.lname;
     user.score = parseInt(req.body.score, 10);
     user.save().then(function() {
-    	//Find all usres, loop through the users, get the closest score
+    	//Find all users, loop through the users, get the closest score
     	db.User.findAll({
     		where: {
     			usertype: {
