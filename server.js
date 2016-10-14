@@ -30,7 +30,7 @@ app.get('/login', function(req, res) {
 
 /*app.use(session({
   secret: 'keyboard cat',
-  cookie: {  }
+  cookie: {  }n
 }));*/
 app.use(bodyParser.urlencoded({
     extended: false
@@ -61,7 +61,28 @@ app.get('/survey', function(req, res){
    res.sendFile('survey.html', viewOptions)
 	});
 
-
 app.get('/events', function(req, res){
    res.sendFile('events.html', viewOptions)
 	});
+
+app.get('/about', function(req, res){
+   res.sendFile('about.html', viewOptions)
+	});
+
+app.post("api/survey", function(req,res){
+    console.log("I am about to update a user")
+    });
+
+    /*models.item.create({
+        category:req.body.category,
+        title: req.body.title,
+        type: req.body.type,
+        size: req.body.size,
+        condition: req.body.condition,
+        zipcode: req.session.user.zipcode,
+        image: req.body.coaturl,
+        donatorId: req.session.user.id
+    }).then (function(data){
+        console.log('data');
+        res.redirect('/inventory');
+    });*/
