@@ -57,9 +57,14 @@ db.sequelize.sync().then(function() {
 });
 
 
-app.get('/survey', function(req, res){
-   res.sendFile('survey.html', viewOptions)
-	});
+app.get('/survey', function(req, res) {
+   if (req.user) {
+    res.sendFile('survey.html', viewOptions) 
+   } else {
+    res.redirect('/login');
+   }
+   
+});
 
 
 app.get('/events', function(req, res){
