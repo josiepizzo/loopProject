@@ -66,6 +66,10 @@ app.get('/survey', function(req, res) {
    
 });
 
+app.get('/forum', function(req, res){
+   res.sendFile('forum.html', viewOptions)
+	});
+
 app.get('/events', function(req, res){
    res.sendFile('events.html', viewOptions)
 	});
