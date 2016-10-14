@@ -26,11 +26,11 @@ h4.subheading {
 }
 
 .img-circle {
-    border-radius: 80%;
-    border-top-left-radius: 80%;
-    border-top-right-radius: 80%;
-    border-bottom-right-radius: 80%;
-    border-bottom-left-radius: 80%;
+    border-radius: 10%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
 }
 
 
