@@ -1,7 +1,6 @@
 {
   "development": {
     "username": "root",
-    "username": "root",
     "password": "",
 
     "database": "loop_db",
