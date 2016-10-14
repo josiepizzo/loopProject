@@ -13,8 +13,8 @@ module.exports = function(sequelize, DataTypes) {
     lname: DataTypes.STRING,
     score: DataTypes.INTEGER,
     match: DataTypes.STRING,
-    usertype: DataTypes.BOOLEAN,
-    paired: DataTypes.BOOLEAN
+    usertype: DataTypes.STRING,
+    paired: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {

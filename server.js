@@ -74,9 +74,44 @@ app.get('/about', function(req, res){
    res.sendFile('about.html', viewOptions)
 	});
 
-app.post("api/survey", function(req,res){
+app.post("/api/survey", function(req,res){
     console.log("I am about to update a user")
-    });
+    console.log (req.user);
+    console.log(req.body);
+    //usertype: 'true', fname: 'nancy', lname: 'lucas', score: '75'
+    var user = req.user;
+    user.usertype = req.body.usertype;
+    user.fname = req.body.fname;
+    user.lname = req.body.lname;
+    user.score = parseInt(req.body.score, 10);
+    user.save().then(function() {
+    	//Find all usres, loop through the users, get the closest score
+    	db.User.findAll({
+    		where: {
+    			usertype: {
+    				$ne: user.usertype
+    			},
+    			id: {
+    				$ne: user.id
+    			},
+    			paired: null
+    		}
+    	}).then(function(users) {
+    		console.log('users', users);
+    		if (users.length == 0) {
+    			return res.send({matchedUser: null});
+    		}
+    		var matchedUser = users[0];
+    		user.paired = matchedUser.id;
+    		matchedUser.paired = user.id;
+    		user.save().then(function() {
+    			matchedUser.save().then(function() {
+    				res.send({matchedUser: matchedUser});		
+    			});
+    		});
+    	});
+    });   
+ });
 
     /*models.item.create({
         category:req.body.category,

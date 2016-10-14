@@ -41,7 +41,7 @@ $(document).ready(function(){
 		
 			//Creates person object and converts result array from string --> number array.
 			var newMember = {
-				usertype: role == 1 ? true : false,
+				usertype: role,
 				fname: $("#firstName").val().trim(),
 				lname: $("#lastName").val().trim(),
 				score: score,
