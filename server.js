@@ -65,6 +65,9 @@ app.get('/survey', function(req, res) {
    }
    
 });
+app.get('/', function(req, res){
+   res.sendFile('index.html', viewOptions)
+    });
 
 app.get('/forum', function(req, res){
    res.sendFile('forum.html', viewOptions)

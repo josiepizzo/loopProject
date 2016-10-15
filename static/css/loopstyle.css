@@ -13,12 +13,21 @@ h2 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 
 }
-
+.navbar-custom {
+  background-color: black;
+  padding:0px;
+}
+.navbar-right {
+  padding:25px 0px !important;
+}
 .navbar-custom .nav li a, .navbar-custom .navbar-toggle {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: white;
     text-transform: uppercase;
     font-size: 22px;
+}
+.logo{
+  width: 200px;
 }
 
 h4.subheading {
