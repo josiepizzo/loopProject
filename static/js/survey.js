@@ -49,9 +49,10 @@ $(document).ready(function(){
 
 			$.post("/api/survey", newMember,
 		    function(data){
-		    	if(data == true) {
+		    	//if(data == true) {
 		    		alert("We have a match for you! Please check your email for next steps");
-		    	}
+		    		location.assign("/events");
+		    	//}
 		    });
 
 		
