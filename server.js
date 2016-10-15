@@ -68,15 +68,15 @@ app.get('/survey', function(req, res) {
 
 app.get('/forum', function(req, res){
    res.sendFile('forum.html', viewOptions)
-	});
+    });
 
 app.get('/events', function(req, res){
    res.sendFile('events.html', viewOptions)
-	});
+    });
 
 app.get('/about', function(req, res){
    res.sendFile('about.html', viewOptions)
-	});
+    });
 
 app.post("/api/survey", function(req,res){
     console.log("I am about to update a user")
@@ -89,31 +89,31 @@ app.post("/api/survey", function(req,res){
     user.lname = req.body.lname;
     user.score = parseInt(req.body.score, 10);
     user.save().then(function() {
-    	//Find all usres, loop through the users, get the closest score
-    	db.User.findAll({
-    		where: {
-    			usertype: {
-    				$ne: user.usertype
-    			},
-    			id: {
-    				$ne: user.id
-    			},
-    			paired: null
-    		}
-    	}).then(function(users) {
-    		console.log('users', users);
-    		if (users.length == 0) {
-    			return res.send({matchedUser: null});
-    		}
-    		var matchedUser = users[0];
-    		user.paired = matchedUser.id;
-    		matchedUser.paired = user.id;
-    		user.save().then(function() {
-    			matchedUser.save().then(function() {
-    				res.send({matchedUser: matchedUser});		
-    			});
-    		});
-    	});
+        //Find all usres, loop through the users, get the closest score
+        db.User.findAll({
+            where: {
+                usertype: {
+                    $ne: user.usertype
+                },
+                id: {
+                    $ne: user.id
+                },
+                paired: null
+            }
+        }).then(function(users) {
+            console.log('users', users);
+            if (users.length == 0) {
+                return res.send({matchedUser: null});
+            }
+            var matchedUser = users[0];
+            user.paired = matchedUser.id;
+            matchedUser.paired = user.id;
+            user.save().then(function() {
+                matchedUser.save().then(function() {
+                    res.send({matchedUser: matchedUser});       
+                });
+            });
+        });
     });   
  });
 
