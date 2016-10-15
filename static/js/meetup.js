@@ -27,7 +27,7 @@ function updatePage(){
 
 $.getJSON(apiURL,function(flickrJson){ 
 
-       console.log(flickrJson);
+       console.log(flickrJson[0]);
 
 
   for ( i = 0; i < perPage; i++ ){ 

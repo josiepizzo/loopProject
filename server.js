@@ -38,7 +38,12 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 //noapp.use(require('connect-multiparty')());
 app.use(cookieParser());
-app.use(session({ secret: 'super-secret' }));
+app.use(session({ 
+    secret: 'super-secret', 
+    resave: false/*,
+    saveUninitialized: true,
+    cookie: { secure: true }*/
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -58,6 +63,8 @@ db.sequelize.sync().then(function() {
 
 
 app.get('/survey', function(req, res) {
+   console.log("req.user");
+   console.log(req.user);
    if (req.user) {
     res.sendFile('survey.html', viewOptions) 
    } else {
