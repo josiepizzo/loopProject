@@ -32,7 +32,7 @@ $.getJSON(apiURL,function(flickrJson){
 
   for ( i = 0; i < perPage; i++ ){ 
 
-        $("#results").prepend('<p><a href="'+flickrJson.results[i].link+'">'+flickrJson.results[i].name+'</a></p>');
+        $("#results").prepend('<p><a href="'+flickrJson.results[i].link+'" target="_blank">'+flickrJson.results[i].name+'</a></p>');
       } // end of for loop
   }); // end of getJSON
 
