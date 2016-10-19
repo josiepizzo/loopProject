@@ -18,6 +18,10 @@ module.exports = function(passport, db) {
         passwordField: 'password',
         passReqToCallback: true
     }, function(req, username, password, done) {
+
+        console.log('+++++++++++++THIS IS REQ.BODY LOCAL-SIGNUP++++++');
+        console.log(req.body); 
+        console.log('+++++++++++++THIS IS REQ.BODY LOCAL-SIGNUP++++++');   
         console.log('hey in localsignup');
         console.log('username', username);
         console.log('password', password);
@@ -30,8 +34,10 @@ module.exports = function(passport, db) {
                 //var salt = bcrypt.genSaltSync(10);
                 //var hashedpassword = bcrypt.hashSync(password,salt);
                 var hashedpassword = password;
+                var email = req.body.email;
+                console.log(':::::::::',req.body.email,'::::::::::');
                 console.log('creatging user', password, username);
-                db.User.create({ username: username, password: hashedpassword }).then(function(dbUser) {
+                db.User.create({ username: username, password: hashedpassword, email: email}).then(function(dbUser) {
                     console.log('created user', dbUser);
                     done(null, dbUser);
                 }).catch(function(error) {

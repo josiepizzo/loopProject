@@ -3,6 +3,9 @@ var passport = require('passport');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var api_key = 'key-f4e5dba4903545fa913ff6667ba25b05';
+var domain = 'mg.theloopnj.com';
+var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 
 var app = express();
@@ -13,8 +16,6 @@ var viewOptions = {
 }
 
 var db = require('./models');
-
-
 //line below allows anything that is in this folder to be accessed via the internet
 //inside the public folder the css file and any images can be stored
 app.use('/', express.static(__dirname + '/static/'));
@@ -38,11 +39,12 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 //noapp.use(require('connect-multiparty')());
 app.use(cookieParser());
-app.use(session({ 
-    secret: 'super-secret', 
-    resave: false/*,
-    saveUninitialized: true,
-    cookie: { secure: true }*/
+app.use(session({
+    secret: 'super-secret',
+    resave: false
+        /*,
+            saveUninitialized: true,
+            cookie: { secure: true }*/
 }));
 
 app.use(passport.initialize());
@@ -63,34 +65,34 @@ db.sequelize.sync().then(function() {
 
 
 app.get('/survey', function(req, res) {
-   console.log("req.user");
-   console.log(req.user);
-   if (req.user) {
-    res.sendFile('survey.html', viewOptions) 
-   } else {
-    res.redirect('/login');
-   }
-   
+    console.log("req.user");
+    console.log(req.user);
+    if (req.user) {
+        res.sendFile('survey.html', viewOptions)
+    } else {
+        res.redirect('/login');
+    }
+
 });
-app.get('/', function(req, res){
-   res.sendFile('index.html', viewOptions)
-    });
+app.get('/', function(req, res) {
+    res.sendFile('index.html', viewOptions)
+});
 
-app.get('/forum', function(req, res){
-   res.sendFile('forum.html', viewOptions)
-    });
+app.get('/forum', function(req, res) {
+    res.sendFile('forum.html', viewOptions)
+});
 
-app.get('/events', function(req, res){
-   res.sendFile('events.html', viewOptions)
-    });
+app.get('/events', function(req, res) {
+    res.sendFile('events.html', viewOptions)
+});
 
-app.get('/about', function(req, res){
-   res.sendFile('about.html', viewOptions)
-    });
+app.get('/about', function(req, res) {
+    res.sendFile('about.html', viewOptions)
+});
 
-app.post("/api/survey", function(req,res){
+app.post("/api/survey", function(req, res) {
     console.log("I am about to update a user")
-    console.log (req.user);
+    console.log(req.user);
     console.log(req.body);
     //usertype: 'true', fname: 'nancy', lname: 'lucas', score: '75'
     var user = req.user;
@@ -113,30 +115,41 @@ app.post("/api/survey", function(req,res){
         }).then(function(users) {
             console.log('users', users);
             if (users.length == 0) {
-                return res.send({matchedUser: null});
+                return res.send({ matchedUser: null });
             }
             var matchedUser = users[0];
             user.paired = matchedUser.id;
             matchedUser.paired = user.id;
             user.save().then(function() {
                 matchedUser.save().then(function() {
-                    res.send({matchedUser: matchedUser});       
+                    res.send({ matchedUser: matchedUser });
                 });
             });
         });
-    });   
- });
 
-    /*models.item.create({
-        category:req.body.category,
-        title: req.body.title,
-        type: req.body.type,
-        size: req.body.size,
-        condition: req.body.condition,
-        zipcode: req.session.user.zipcode,
-        image: req.body.coaturl,
-        donatorId: req.session.user.id
-    }).then (function(data){
-        console.log('data');
-        res.redirect('/inventory');
-    });*/
+        var data = {
+            from: 'The Loop <noreply@theloopnj.com>',
+            to: req.user.email,
+            subject: 'Welcome to The Loop',
+            html: 'Welcome to the loop, a community dedicated to supporting New Jersey women interested in technology. Our goal is to facilitate and strengthen the mentor-mentee relationship. Thank you for taking our survey. You will be matched with a mentor or mentee soon. Please continue to stay in the loop by visiting us at - <a href="http://www.theloopnj.com/events" target="_blank">www.theloopnj.com</a>'
+        };
+
+        mailgun.messages().send(data, function(error, body) {
+            console.log(body);
+        });
+    });
+});
+
+/*models.item.create({
+    category:req.body.category,
+    title: req.body.title,
+    type: req.body.type,
+    size: req.body.size,
+    condition: req.body.condition,
+    zipcode: req.session.user.zipcode,
+    image: req.body.coaturl,
+    donatorId: req.session.user.id
+}).then (function(data){
+    console.log('data');
+    res.redirect('/inventory');
+});*/
