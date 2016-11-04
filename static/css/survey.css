@@ -41,23 +41,29 @@ h4 {
 #submit {
   margin-top: 2%;
   margin-bottom: 5%;
-  background-color: #123652;
+  background-color: black;
+  border:none;
 }
 
 #submit:hover {
   background-color: #496D89;
 }
-
+#questions{
+  margin-top:45px;
+}
 .question-container {
   text-align: center;
-  padding-bottom:10%;
+  padding-bottom:45px;
 }
-
+.question-select{
+  width:50px;
+  padding-left:10px;
+}
 .userInfo {
   text-align: center;
   padding-bottom: 2%;
   margin-bottom: 1%;
-  border-bottom: 8px solid #123652;
+  border-bottom: 8px solid black;
 }
 
 #name {
