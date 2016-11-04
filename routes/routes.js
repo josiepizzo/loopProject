@@ -25,7 +25,7 @@ module.exports = function(app, passport, db){
     res.send(req.user);
   });
 
-  //app.get('/servey', function(req, res){
+  //app.get('/survey', function(req, res){
   // res.sendFile('survey.html', viewOptions)
   //});
 
